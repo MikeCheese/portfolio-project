@@ -58,15 +58,15 @@ def get_performances(db:Session, skip: int = 0, limit: int = 100,
 
 
     #analytics queries
-    def get_player_count(db:Session)
+    def get_player_count(db:Session):
         query = db.query(models.Player)
         return query.count()
             
-    def get_team_count(db:Session)
+    def get_team_count(db:Session):
             query = db.query(models.Team)
             return query.count() 
 
-    def get_league_count(db:Session)
+    def get_league_count(db:Session):
             query = db.query(models.League)
             return query.count()  
     
